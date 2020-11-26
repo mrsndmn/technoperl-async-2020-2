@@ -27,4 +27,4 @@ jobs:
         with:
           cpanfile: "cpanfile"
           sudo: false
-      - run: prove -v --timer t/
+      - run: PERL5OPT="$PERL5OPT -Ilib -Ilocal/lib/perl5"  prove -v --timer t/
