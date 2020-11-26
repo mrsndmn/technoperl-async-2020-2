@@ -3,9 +3,7 @@ use common::sense;
 
 use Test::Class::Moose::CLI;
 
-log_info(exclude_tags => $exclude_tags);
-
-my $runner = Test::Class::Moose::CLI->new_with_options(
+Test::Class::Moose::CLI->new_with_options(
     show_timing => 1,
     statistics  => 1,
 )->run;

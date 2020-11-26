@@ -27,4 +27,4 @@ jobs:
         with:
           cpanfile: "cpanfile"
           sudo: false
-      - run: prove -v --timer t/tcm.t
+      - run: prove -v --timer t/
