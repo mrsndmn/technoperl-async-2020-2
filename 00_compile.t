@@ -1,5 +1,4 @@
-use strict;
-use warnings;
+use common::sense;
 
 use Test::More;
 use Test::Compile;
