@@ -25,3 +25,30 @@ prove -v --timer t/
     ├── lib                 # тесты для Test::Class::Moose (tcm.t)
     └── tcm.t
 ```
+
+
+### Чеклист:
+
+#### Coro::Debug
+
+```
+perl bin/corodbg_demo.pl
+socat readline unix:/tmp/corodbd.sock
+```
+
+#### Можно запускать только опеределенные тест-классы и методы
+```
+prove -v --timer t/tcm.t :: --classes Game::Test --methods test_register_user
+```
+
+#### Можно посмотреть только вывод TAP
+```
+prove -v --timer t/tcm.t 2>/dev/null
+```
+
+#### Можно посмотреть coverage
+
+# todo
+
+
+

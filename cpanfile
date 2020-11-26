@@ -1,5 +1,6 @@
 requires 'Mouse', '2.5.9';
 
+requires 'EV', '0';
 requires 'AnyEvent', '0';
 requires 'Coro', '0';
 
@@ -11,6 +12,7 @@ on test => sub {
     requires 'Test::Perl::Critic', '0';
     requires 'Test::Class::Moose', '0';;
 
+    requires 'Devel::Cover', '0';
     requires 'Mock::Quick', '0';
     requires 'UUID::Random';
     requires 'Test2', '0';
