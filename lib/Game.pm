@@ -31,5 +31,5 @@ sub register_user {
     return $user, undef
 }
 
-
-1;
+no Mouse;
+__PACKAGE__->meta->make_immutable();
