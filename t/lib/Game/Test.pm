@@ -2,6 +2,7 @@ package Game::Test;
 
 use Test::Class::Moose bare => 1;
 
+use Test::Exception;
 use Test2::Tools::Compare;
 
 use Game;
@@ -9,7 +10,9 @@ use Game;
 sub test_game_init {
     my ($test) = @_;
 
-    my $e = Test::Exception::lives_ok { Game->new() } 'game init successful';
+    my $e = Test::Exception::lives_ok(
+        sub { Game->new(max_users => 1,) }, 'game init successful'
+    );
 
     warn("Can't init game: ", $e) if $e;
 }

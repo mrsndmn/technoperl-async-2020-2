@@ -13,6 +13,8 @@ on test => sub {
     requires 'Test::Class::Moose', '0';;
 
     requires 'Devel::Cover', '0';
+    requires 'Template', '0';
+
     requires 'Mock::Quick', '0';
     requires 'UUID::Random';
     requires 'Test2', '0';
