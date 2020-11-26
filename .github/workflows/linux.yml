@@ -1,0 +1,25 @@
+# .github/workflows/linux.yml
+jobs:
+  perl_tester:
+    runs-on: ubuntu-latest
+    name: "perl v${{ matrix.perl-version }}"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        perl-version:
+          - "5.30"
+          - "5.28"
+          - "5.26"
+
+    container:
+      image: perldocker/perl-tester:${{ matrix.perl-version }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: uses install-with-cpm
+        uses: perl-actions/install-with-cpm@stable
+        with:
+          cpanfile: "cpanfile"
+          sudo: false
+      - run: prove -v --timer t/tcm.t

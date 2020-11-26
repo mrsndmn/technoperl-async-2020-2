@@ -1,0 +1,180 @@
+severity  = 4
+verbose   = [%p] %m at %f:%l near '%r'.  (Severity: %s)\n
+
+only = 1
+
+criticism-fatal = 1
+color     = 1
+
+[Variables::ProhibitUnusedVariables]
+severity = 5
+
+[Variables::ProhibitUnusedVarsStricter]
+allow_unused_subroutine_arguments = 1
+allow_if_computed_by = stat unpack mock Scope::Guard Test::TP
+
+[TestingAndDebugging::RequireUseStrict]
+equivalent_modules = common::sense
+
+[TestingAndDebugging::RequireUseWarnings]
+equivalent_modules = common::sense
+
+[Moose::RequireMakeImmutable]
+equivalent_modules = Mouse
+severity = 4
+
+[Moose::RequireCleanNamespace]
+modules = Mouse
+severity = 3
+
+[Moose::ProhibitDESTROYMethod]
+equivalent_modules = Mouse
+severity = 4
+
+[Tics::ProhibitUseBase]
+servety = 4
+
+[Subroutines::ProhibitManyArgs]
+skip_object = 1
+max_arguments = 6
+
+[Variables::ProhibitUnusedVarsStricter]
+severity = 5
+
+[Modules::RequireFilenameMatchesPackage]
+severity = 5
+
+[TooMuchCode::ProhibitUnusedImport]
+severity = 4
+
+[TooMuchCode::ProhibitUnusedInclude]
+severity = 4
+
+[BuiltinFunctions::ProhibitBooleanGrep]
+severity = 4
+
+[TooMuchCode::ProhibitExcessiveColons]
+severity = 4
+
+[ValuesAndExpressions::ProhibitEmptyCommas]
+severity = 4
+
+[ValuesAndExpressions::ProhibitArrayAssignAref]
+severity = 4
+
+[ValuesAndExpressions::ProhibitBarewordDoubleColon]
+severity = 4
+
+[ValuesAndExpressions::ProhibitCommaSeparatedStatements]
+severity = 4
+
+[ValuesAndExpressions::ProhibitDuplicateHashKeys]
+severity = 4
+
+[ValuesAndExpressions::UnexpandedSpecialLiteral]
+severity = 4
+
+[CodeLayout::ProhibitHardTabs]
+severity = 4
+
+[CodeLayout::ProhibitIfIfSameLine]
+severity = 5
+
+[Variables::ProhibitFatCommaInDeclaration]
+severity = 5
+
+[BuiltinFunctions::GrepWithSimpleValue]
+severity = 5
+
+
+# todo
+# [Perl::Critic::Policy::CognitiveComplexity::ProhibitExcessCognitiveComplexity]
+# severity = 5
+# warn_level = 100
+# info_level = 1
+
+[BuiltinFunctions::ProhibitComplexMappings]
+[BuiltinFunctions::ProhibitShiftRef]
+[BuiltinFunctions::ProhibitSleepViaSelect]
+[BuiltinFunctions::ProhibitStringyEval]
+[BuiltinFunctions::RequireBlockGrep]
+[BuiltinFunctions::RequireBlockMap]
+[BuiltinFunctions::RequireGlobFunction]
+[BuiltinFunctions::RequireSimpleSortBlock]
+
+[ClassHierarchies::ProhibitAutoloading]
+[ClassHierarchies::ProhibitExplicitISA]
+[ClassHierarchies::ProhibitOneArgBless]
+
+[CodeLayout::ProhibitFatCommaNewline]
+[CodeLayout::RequireConsistentNewlines]
+[CodeLayout::RequireFinalSemicolon]
+[CodeLayout::RequireTrailingCommaAtNewline]
+
+[ControlStructures::ProhibitLabelsWithSpecialBlockNames]
+[ControlStructures::ProhibitMutatingListFunctions]
+[ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions]
+[ControlStructures::ProhibitUnreachableCode]
+[ControlStructures::ProhibitYadaOperator]
+
+[Dynamic::NoIndirect]
+[ErrorHandling::RequireCarping]
+[ErrorHandling::RequireCheckingReturnValueOfEval]
+
+[InputOutput::ProhibitBarewordFileHandles]
+[InputOutput::ProhibitExplicitStdin]
+[InputOutput::ProhibitInteractiveTest]
+[InputOutput::ProhibitJoinedReadline]
+[InputOutput::ProhibitOneArgSelect]
+[InputOutput::ProhibitReadlineInForLoop]
+[InputOutput::ProhibitTwoArgOpen]
+[InputOutput::RequireBriefOpen]
+lines = 100
+[InputOutput::RequireEncodingWithUTF8Layer]
+
+[Miscellanea::ProhibitFormats]
+[Miscellanea::TextDomainUnused]
+
+[Modules::ProhibitAutomaticExportation]
+[Modules::ProhibitConditionalUseStatements]
+[Modules::ProhibitEvilModules]
+[Modules::ProhibitMultiplePackages]
+
+[Moose::ProhibitMultipleWiths]
+[Moose::ProhibitNewMethod]
+
+[NamingConventions::ProhibitAmbiguousNames]
+[Objects::ProhibitIndirectSyntax]
+
+[RegularExpressions::ProhibitCaptureWithoutTest]
+[RegularExpressions::ProhibitComplexRegexes]
+[RegularExpressions::ProhibitUnusedCapture]
+[RegularExpressions::RequireExtendedFormatting]
+
+[Subroutines::ProhibitNestedSubs]
+[Subroutines::ProhibitReturnSort]
+[Subroutines::ProhibitSubroutinePrototypes]
+[Subroutines::RequireArgUnpacking]
+short_subroutine_statements = 5
+
+[TestingAndDebugging::ProhibitNoStrict]
+[TestingAndDebugging::ProhibitNoWarnings]
+[TestingAndDebugging::ProhibitProlongedStrictureOverride]
+[Tics::ProhibitManyArrows]
+
+[ValuesAndExpressions::ProhibitLeadingZeros]
+[ValuesAndExpressions::ProhibitMismatchedOperators]
+[ValuesAndExpressions::ProhibitMixedBooleanOperators]
+[ValuesAndExpressions::ProhibitNullStatements]
+[ValuesAndExpressions::RequireQuotedHeredocTerminator]
+
+[Variables::ProhibitAugmentedAssignmentInDeclaration]
+[Variables::ProhibitConditionalDeclarations]
+[Variables::ProhibitMatchVars]
+[Variables::ProhibitPackageVars]
+[Variables::ProhibitReusedNames]
+[Variables::ProhibitUselessInitialization]
+[Variables::RequireInitializationForLocalVars]
+[Variables::RequireLexicalLoopIterators]
+[Variables::RequireLocalizedPunctuationVars]
+[Variables::RequireNegativeIndices]
